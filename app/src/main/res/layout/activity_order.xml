@@ -25,12 +25,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/enter_name"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/nameLabel"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/nameLabel" />
 
     <TextView
@@ -60,13 +58,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/enter_address"
         android:inputType="textMultiLine"
         app:layout_constraintBaseline_toBaselineOf="@+id/AddressText"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/AddressText" />
 
     <TextView
@@ -82,15 +78,13 @@
 
     <EditText
         android:id="@+id/phoneEdit"
-        android:layout_width="0dp"
+        android:layout_width="134dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/enter_phone"
         android:inputType="phone"
         app:layout_constraintBaseline_toBaselineOf="@+id/phoneText"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/phoneText" />
 
     <EditText
@@ -98,13 +92,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/enter_note"
         android:inputType="textMultiLine|textCapSentences"
         app:layout_constraintBaseline_toBaselineOf="@+id/noteText"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/noteText" />
 
     <TextView
@@ -158,5 +150,16 @@
             android:onClick="onRadioButtonClicked"
             android:text="@string/pick_up" />
     </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phoneEdit"
+        app:layout_constraintTop_toBottomOf="@+id/AddressEdit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
