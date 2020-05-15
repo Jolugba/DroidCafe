@@ -2,6 +2,7 @@ package com.tinuade.droidcafe;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
@@ -47,6 +48,20 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
         startActivity(intent);
 
+
+    }
+
+    /**
+     * Inflates the menu, and adds items to the action bar if it is present.
+     *
+     * @param menu Menu to inflate.
+     * @return Returns true if the menu inflated.
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main,menu);
+        return true;
 
     }
 }
