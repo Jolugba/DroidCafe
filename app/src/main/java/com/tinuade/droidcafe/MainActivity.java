@@ -3,9 +3,11 @@ package com.tinuade.droidcafe;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -63,5 +65,23 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main,menu);
         return true;
 
+    }
+    /**
+     * Handles app bar item clicks.
+     *
+     * @param item Item clicked.
+     * @return True if one of the defined items was clicked.
+     */
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        //Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id=item.getItemId();
+        if (id==R.id.action_setting){
+            return true;
+        }else
+        return super.onOptionsItemSelected(item);
     }
 }
