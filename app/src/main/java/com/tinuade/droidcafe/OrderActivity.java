@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 public class OrderActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -100,5 +101,30 @@ public class OrderActivity extends AppCompatActivity implements AdapterView.OnIt
 
     }
 
+    /**
+     * Handles the button click to create a new date picker fragment and
+     * show it.
+     *
+     * @param view View that was clicked
+     */
+    public void showDate(View view) {
+        DialogFragment newFragment= new DatePickerFragment();
+        newFragment.show(getSupportFragmentManager(),getString(R.string.datePicker));
+    }
+    /**
+     * Process the date picker result into strings that can be displayed in
+     * a Toast.
+     *
+     * @param year Chosen year
+     * @param month Chosen month
+     * @param day Chosen day
+     */
+    public void processDataPicker(int year,int month,int day){
+        String yearInString=Integer.toString(year);
+        String monthInString=Integer.toString(month);
+        String dayInString=Integer.toString(day);
+        String dateMessage=(yearInString+"/"+monthInString+"/"+dayInString);
+         displayToast(getString(R.string.date)+": "+dateMessage);
 
+    }
 }
