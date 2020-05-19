@@ -121,7 +121,7 @@ public class OrderActivity extends AppCompatActivity implements AdapterView.OnIt
      */
     public void processDataPicker(int year,int month,int day){
         String yearInString=Integer.toString(year);
-        String monthInString=Integer.toString(month);
+        String monthInString=Integer.toString(month+1);
         String dayInString=Integer.toString(day);
         String dateMessage=(yearInString+"/"+monthInString+"/"+dayInString);
          displayToast(getString(R.string.date)+": "+dateMessage);
